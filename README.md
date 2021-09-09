@@ -1,2 +1,2 @@
 # Selenium-Python-course
-Programs of the course "Test Automation with Selenium and Python".
+Scripts written to complete the tasks of the course "Test Automation Using Selenium and Python" on the Stepik.

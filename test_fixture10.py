@@ -7,7 +7,11 @@ link = "http://selenium1py.pythonanywhere.com/"
 @pytest.fixture(scope="function")
 def browser():
     print("\nstart browser for test..")
-    browser = webdriver.Chrome()
+    #строчки для отключения вывода вспомогательных сообщений Chrome DevTools
+    options = webdriver.ChromeOptions()
+    options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    browser = webdriver.Chrome(options=options)
+    # browser = webdriver.Chrome()
     yield browser
     print("\nquit browser..")
     browser.quit()

@@ -15,7 +15,7 @@ def browser():
 @pytest.fixture(autouse=True)
 def prepare_data():
     print()
-    print("preparing some critical data for every test")
+    print("\npreparing some critical data for every test")
 
 
 class TestMainPage1():

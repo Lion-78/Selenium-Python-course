@@ -11,6 +11,6 @@ def test_not_succeed():
     assert False
 
 
-@pytest.mark.skip
+@pytest.mark.skip(reason="Not implemented yet")
 def test_skipped():
     assert False

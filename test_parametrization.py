@@ -34,10 +34,9 @@ links = {"https://stepik.org/lesson/236895/step/1",
 
 @pytest.mark.parametrize("link", links)
 class TestStepikPages():
+
     def test_page(self, browser, link):
-
         global message
-
         browser.get(link)
         input_text = WebDriverWait(browser, 5).until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".ember-text-area")))
         answer = str(math.log(int(time.time())))
